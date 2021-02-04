@@ -1,7 +1,4 @@
----
-  - name: Test Role
-    hosts:
-      - all
-    gather_facts: true
-    roles:
-      - roleawx
+- name: Update all packages to their latest version
+  apt:
+    name: "*"
+    state: latest
